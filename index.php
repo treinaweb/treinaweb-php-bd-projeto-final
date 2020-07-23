@@ -8,9 +8,9 @@ use App\Uteis\Conexao;
 $configBancoDeDados = require 'config/banco-de-dados.php';
 $conexao = new Conexao($configBancoDeDados);
 
-var_dump($conexao);
+$cursoRepositorio = new Curso($conexao);
 
-$cursoRepositorio = new Curso;
+$cursoRepositorio->todos();
 
 require_once "exibicao/principal.php";
 
