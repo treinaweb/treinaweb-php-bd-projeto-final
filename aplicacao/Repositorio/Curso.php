@@ -8,6 +8,13 @@ class Curso extends RepositorioBase
 {
     public function todos()
     {
-        var_dump($this->select('cursos'));
+        $cursosArray = $this->select('cursos');
+
+        $cursosObjeto = [];
+        foreach ($cursosArray as $curso) {
+            $cursosObjeto[] = CursoEntidade::fromArray($curso);
+        }
+
+        return $cursosObjeto;
     }
 }

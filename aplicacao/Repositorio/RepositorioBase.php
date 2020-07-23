@@ -19,6 +19,6 @@ abstract class RepositorioBase
 
         $resultado = $this->conexao->query($sql);
 
-        return $resultado->fetchAll();
+        return $resultado->fetchAll(\PDO::FETCH_ASSOC);
     }
 }

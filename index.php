@@ -10,7 +10,5 @@ $conexao = new Conexao($configBancoDeDados);
 
 $cursoRepositorio = new Curso($conexao);
 
-$cursoRepositorio->todos();
-
 require_once "exibicao/principal.php";
 
